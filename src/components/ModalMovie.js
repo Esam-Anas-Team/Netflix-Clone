@@ -1,21 +1,15 @@
-import React from 'react'
 import Modal from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button'
-// import ModalDialog from 'react-bootstrap/ModalDialog'
 import Form from 'react-bootstrap/Form'
 
-
-
-
 export default function ModalMovie(props) {
-  // console.log(props);
   return (
     <>
       <Modal show={props.show} onHide={props.handleClose}>
-        <Modal.Header closeButton style={{ backgroundColor: '#7F8487' }}>
+        <Modal.Header closeButton style={{ backgroundColor: '#7F8487' ,color:"white"}}>
           <Modal.Title>{props.chosenMovie.title}</Modal.Title>
         </Modal.Header>
-        <Modal.Body style={{ backgroundColor: '#7F8487' }}>
+        <Modal.Body style={{ backgroundColor: '#61A4BC' }}>
           <img src={`https://image.tmdb.org/t/p/w400/${props.chosenMovie.poster_path}`} alt="Movie poster" />
           <Form>
             <Form.Group

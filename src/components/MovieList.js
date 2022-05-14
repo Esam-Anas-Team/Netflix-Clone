@@ -1,5 +1,4 @@
-import React from 'react'
-import Movie from './movie/Movie'
+import Movie from './Movie'
 
 export default function MovieList(props) {
   return (

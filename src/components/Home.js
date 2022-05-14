@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import MovieList from '../movieList/MovieList'
+import { useEffect, useState } from 'react';
+import MovieList from './MovieList'
 
 
 export default function Home() {
@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <>
       
-      <div>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, minmax(18rem, 1fr))', backgroundColor: '#1A132F' }}>
         {
           (movies.length > 0) && <MovieList movies={movies} />
         }
