@@ -2,18 +2,14 @@ import { useState } from 'react'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 import ModalMovie from './ModalMovie'
-
 export default function Movie(props) {
   const [show, setShow] = useState(false);
   const [chosenMovie, setChosenMovie] = useState({});
-
   const handleClose = () => setShow(false);
   const handleShow = () => {
     setChosenMovie(props.movie);
-    // console.log(props.movie);
     setShow(true);
   }
-
   return (
     <>
       <Card style={{ width: '30rem', margin: '5px', backgroundColor: '#61A4BC' }}>
@@ -30,7 +26,7 @@ export default function Movie(props) {
         </Card.Body>
       </Card>
       {
-        chosenMovie && <ModalMovie show={show} handleClose={handleClose} chosenMovie={chosenMovie}  updateMovie={props.updateMovie}/>
+        chosenMovie && <ModalMovie show={show} handleClose={handleClose} chosenMovie={chosenMovie} updateMovie={props.updateMovie} />
       }
     </>
   )
