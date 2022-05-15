@@ -10,7 +10,7 @@ export default function Movie(props) {
   const handleClose = () => setShow(false);
   const handleShow = () => {
     setChosenMovie(props.movie);
-    console.log(props.movie);
+    // console.log(props.movie);
     setShow(true);
   }
 
@@ -30,7 +30,7 @@ export default function Movie(props) {
         </Card.Body>
       </Card>
       {
-        chosenMovie && <ModalMovie show={show} handleClose={handleClose} chosenMovie={chosenMovie} />
+        chosenMovie && <ModalMovie show={show} handleClose={handleClose} chosenMovie={chosenMovie}  updateMovie={props.updateMovie}/>
       }
     </>
   )
